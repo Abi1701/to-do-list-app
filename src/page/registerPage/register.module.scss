@@ -1,0 +1,63 @@
+.register{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+.registerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.label{
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.input{
+  width: 200px;
+  height: 30px;
+  border-radius: 8px;
+  border: solid 1px cornflowerblue;
+  padding: 8px 16px;
+}
+.submit {
+  width: 84px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-40, #E0E0E0);
+  background: var(--primary-main, #01959F);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+  color: var(--neutral-10, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  cursor: pointer;
+}
+.registerPlace {
+  font-size: 16px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.registerClick {
+  text-decoration: none;
+  color: #01959F;
+}

@@ -1,0 +1,260 @@
+.landingPage{
+  width: 100%;
+  height: 100%;
+}
+.taskContainer{
+  width: 90%;
+  height: auto;
+  margin: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+//task1
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+.groupTask1 {
+  width: 326px;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-main, #01959F);
+  background: var(--primary-surface, #F7FEFF);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.tittleTask {
+  width: 88px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-main, #01959F);
+  background: var(--primary-surface, #F7FEFF);
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(1, 149, 159, 1);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.monthTask {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-left: 2px;
+}
+
+.buttonNewTask {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 5px;
+  background-color: transparent;
+  width: 100px;
+  height: 24px;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+//modal
+.modalTittle {
+  color: var(--neutral-100, #1D1F20);
+  font-size: 18px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  margin-left: 2rem;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 2rem;
+}
+
+.modalLabel {
+  color: var(--neutral-90, #404040);
+  font-size: 12px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  width: 71px;
+  height: 25px;
+}
+
+.modalInput {
+  width: 340px;
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid var(--neutral-40, #E0E0E0);
+}
+
+.modalInput::placeholder {
+  opacity: .6;
+  padding: 8px 16px;
+}
+
+.modalInput2 {
+  width: 143px;
+  height: 30px;
+  border-radius: 8px;
+  line-height: 100px;
+  border: 2px solid var(--neutral-40, #E0E0E0);
+}
+
+.modalInput2::placeholder {
+  opacity: .6;
+  display: flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 0 0;
+}
+
+.buttonContainer {
+  width: 90%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+  gap: 20px;
+}
+
+.buttonModalCancel {
+  width: 84px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-40, #E0E0E0);
+  background: var(--neutral-10, #FFF);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+  color: var(--neutral-100, #1D1F20);
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.buttonModalSubmit {
+  width: 84px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-40, #E0E0E0);
+  background: var(--primary-main, #01959F);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+  color: var(--neutral-10, #FFF);
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+//todo
+.toDoContainer {
+  width: 266px;
+  height: 88px;
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid var(--neutral-40, #E0E0E0);
+  background: var(--neutral-20, #FAFAFA);
+}
+
+.toDoTittle {
+  display: flex;
+  width: 266px;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.editButton {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropDownContainer {
+  display: block;
+  flex-direction: column;
+}
+
+.dropDownMenu {
+  position: absolute;
+  width: 250px;
+  height: 160px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 16px;
+  padding-top: 10px;
+}
+
+.buttonAction {
+  width: 200px;
+  height: 25px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+.buttonAction:hover {
+  color: rgba(1, 149, 159, 1);
+}
+
+.buttonRemove {
+  width: 200px;
+  height: 25px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+.buttonRemove:hover {
+  color: rgba(225, 20, 40, 1);
+}
