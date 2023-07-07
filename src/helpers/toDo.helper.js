@@ -11,15 +11,14 @@ export const getToDo = () => {
 		});
 };
 
-export const postToDo = (data) => {
+export const postToDo = (data, callback) => {
 	axios
 		.post("https://todo-api-18-140-52-65.rakamin.com/todos", data)
 		.then((res) => {
-			localStorage.setItem("_q", data.accessToken);
-			console.log(res);
+			callback(true, res.auth_token);
 		})
 		.catch((err) => {
-			console.log(err);
+			callback(false, err);
 		});
 };
 

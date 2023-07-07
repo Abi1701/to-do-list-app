@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "./authPage.module.scss";
 import { toast } from "react-toastify";
-import axios from "../../utils/axios";
+import { login } from "../../helpers/auth.helper";
 
 export default function AuthPage() {
 	const [value, setValue] = React.useState({
@@ -12,17 +12,20 @@ export default function AuthPage() {
 	const handleChange = (name) => (e) => {
 		setValue({ ...value, [name]: e.target.value });
 	};
-	const handleLogin = async () => {
-		try {
-			const { data } = await axios.post("/auth/login", {
-				email: value.email,
-				password: value.password,
-			});
-			localStorage.setItem("_q", data.auth_token);
-			window.location.pathname("/apps/home");
-		} catch (error) {
-			toast.error("login error");
-		}
+	const handleLogin = () => {
+		const data = {
+			email: value.email,
+			password: value.password,
+		};
+		login(data, (status, res) => {
+			if (status) {
+				localStorage.setItem("auth_token", res);
+				toast.success("Berhasil");
+				window.location.href = "/apps/home";
+			} else {
+				toast.error("gagal");
+			}
+		});
 	};
 	return (
 		<div className={styled.authPage}>

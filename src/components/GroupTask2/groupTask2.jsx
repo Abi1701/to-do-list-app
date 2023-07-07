@@ -57,7 +57,9 @@ export default function GroupTask2() {
 						/>
 					</form>
 					<div className={styled.buttonContainer}>
-						<button className={styled.buttonModalCancel}>Cancel</button>
+						<button onClick={closeModal} className={styled.buttonModalCancel}>
+							Cancel
+						</button>
 						<button className={styled.buttonModalSubmit}>Submit</button>
 					</div>
 				</Modal>

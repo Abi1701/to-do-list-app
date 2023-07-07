@@ -23,7 +23,7 @@ const Router = (loggedIn) => {
 		},
 		{
 			path: "/",
-			element: <LandingPage />,
+			element: <AuthPage />,
 		},
 	];
 };

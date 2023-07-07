@@ -2,7 +2,8 @@ import * as React from "react";
 import styled from "./header.module.scss";
 import Plus from "../../assets/plus.svg";
 import Modal from "react-modal";
-import axios from "axios";
+import { toast } from "react-toastify";
+import { postToDo } from "../../helpers/toDo.helper";
 
 const customStyles = {
 	content: {
@@ -20,6 +21,9 @@ const customStyles = {
 		gap: "50px",
 	},
 };
+
+const Token = localStorage.getItem("auth_token");
+
 export default function HeaderApp() {
 	const [modalIsOpen, setIsOpen] = React.useState(false);
 	const [value, setValue] = React.useState({
@@ -38,20 +42,19 @@ export default function HeaderApp() {
 	}
 
 	const handlePostCard = async () => {
-		try {
-			const { data } = await axios.post(
-				"https://todo-api-18-140-52-65.rakamin.com/todos",
-				{
-					title: value.title,
-					description: value.description,
-				}
-			);
-			localStorage.setItem(data.Token);
-			window.location.reload();
-			console.log(data);
-		} catch (error) {
-			console.log(error);
-		}
+		const data = {
+			title: value.title,
+			description: value.description,
+		};
+		postToDo(data, (status, res) => {
+			if (status) {
+				localStorage.setItem(Token, res);
+				toast.success("Berhasil");
+				window.location.reload();
+			} else {
+				toast.error("gagal");
+			}
+		});
 	};
 
 	return (
@@ -82,7 +85,7 @@ export default function HeaderApp() {
 							/>
 							<label className={styled.modalLabel}>Description</label>
 							<input
-								onChange={handleChange("desctiption")}
+								onChange={handleChange("description")}
 								name="description"
 								className={styled.modalInput2}
 								placeholder="Placeholder"
